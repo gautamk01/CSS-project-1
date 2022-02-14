@@ -6,3 +6,45 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  /* Borders or padding is no longer add to the 
+    total wideth and total height of the box */
+}
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+  /* padding is applied to the all parts */
+}
+.header_part {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #7ed56fab, #28b4859b),
+    url(../img/hero.jpg);
+  /* Here linear-gradient move from right to bottom parrallel to image */
+  background-position: top;
+  /* Will not crop the Top part of image  */
+  background-size: cover;
+
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  /* we used to specify a polygon to shape  polygon(x y,x y,x y,x y)*/
+
+  position: relative;
+  /* We need to show that position relative because we use position property in logo box , logo box is the child class of header part so*/
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.logo {
+  height: 35px;
+}
