@@ -6,7 +6,7 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
 * {
   margin: 0px;
@@ -47,4 +47,29 @@ body {
 }
 .logo {
   height: 35px;
+}
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  display: block;
+  font-size: 60px;
+  font-weight: 400;
+  letter-spacing: 30px;
+}
+.heading-primary-sub {
+  display: block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 10px;
+}
+.Text-box-main {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* translate is basically use to change the position in 2d so it is something special */
 }
