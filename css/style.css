@@ -26,7 +26,7 @@ body {
 }
 .header_part {
   height: 95vh;
-  background-image: linear-gradient(to right bottom, #7ed56fab, #28b4859b),
+  background-image: linear-gradient(to right bottom, #499a3bc0, #28b4859b),
     url(../img/hero.jpg);
   /* Here linear-gradient move from right to bottom parrallel to image */
   background-position: top;
@@ -49,9 +49,19 @@ body {
   height: 35px;
 }
 
+.Text-box-main {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* translate is basically use to change the position in 2d so it is something special */
+  text-align: center;
+}
+
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  margin-bottom: 60px;
 }
 
 .heading-primary-main {
@@ -78,12 +88,31 @@ body {
   letter-spacing: 10px;
   animation: movingright 1s ease-out;
 }
-.Text-box-main {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* translate is basically use to change the position in 2d so it is something special */
+
+/* This part is for main button in home page  */
+/* There are 2 things link and visited */
+/* link - normal link, visited -link after visited */
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  padding: 15px 40px;
+  /* Here padding will be padding:  top&bottom left&right */
+  display: inline-block;
+  border-radius: 20px;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  /* box-shadow : x-axise upslon blur color*/
+}
+/* active state means when u click that button */
+.btn:active {
+  transform: translateY(-1px);
 }
 
 /* giving an animation property to the text */
