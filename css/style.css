@@ -24,6 +24,7 @@ body {
   padding: 30px;
   /* padding is applied to the all parts */
 }
+
 .header_part {
   height: 95vh;
   background-image: linear-gradient(to right bottom, #499a3bc0, #28b4859b),
@@ -96,14 +97,17 @@ body {
 .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
-}
-.btn-white {
-  background-color: #fff;
-  color: #777;
+  position: relative;
   padding: 15px 40px;
   /* Here padding will be padding:  top&bottom left&right */
   display: inline-block;
   border-radius: 20px;
+  transition: all 0.2s;
+}
+.btn-white {
+  background-color: #fff;
+  color: #777;
+  animation: button-main 0.5s ease-in;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -114,7 +118,39 @@ body {
 .btn:active {
   transform: translateY(-1px);
 }
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.3s;
+}
+.btn-white::after {
+  background-color: #fff;
+}
+.btn:hover::after {
+  transform: scaleX(1.5) scaleY(1.7);
+  opacity: 0;
+}
 
+@keyframes button-main {
+  0% {
+    transform: scaleX(1.5) scaleY(1.7);
+    opacity: 0;
+    /* Changing the X axise for a bit */
+  }
+  /* middle state for the animation */
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
 /* giving an animation property to the text */
 @keyframes movingleft {
   /* intial state for the animation */
