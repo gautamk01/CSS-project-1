@@ -8,21 +8,27 @@ Dark green: #28b485
 */
 @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
 
-* {
+*,
+*::after,
+*::before {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box;
+  box-sizing: inherit;
   /* Borders or padding is no longer add to the 
     total wideth and total height of the box */
+}
+html {
+  font-size: 62.5%;
 }
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  /* font-size: 16px; */
   line-height: 1.7;
   color: #777;
   padding: 30px;
   /* padding is applied to the all parts */
+  box-sizing: border-box;
 }
 
 .header_part {
@@ -43,11 +49,11 @@ body {
 
 .logo-box {
   position: absolute;
-  top: 40px;
-  left: 40px;
+  top: 4rem;
+  left: 4rem;
 }
 .logo {
-  height: 35px;
+  height: 3.5rem;
 }
 
 .Text-box-main {
@@ -62,14 +68,14 @@ body {
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
+  margin-bottom: 6rem;
 }
 
 .heading-primary-main {
   display: block;
-  font-size: 60px;
+  font-size: 6rem;
   font-weight: 400;
-  letter-spacing: 30px;
+  letter-spacing: 3rem;
 
   animation-name: movingleft;
   /* Giving the name of the animation that we build*/
@@ -84,9 +90,9 @@ body {
 }
 .heading-primary-sub {
   display: block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
-  letter-spacing: 10px;
+  letter-spacing: 1rem;
   animation: movingright 1s ease-out;
 }
 
@@ -98,10 +104,10 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  padding: 15px 40px;
+  padding: 1.5rem 4rem;
   /* Here padding will be padding:  top&bottom left&right */
   display: inline-block;
-  border-radius: 20px;
+  border-radius: 2rem;
   transition: all 0.2s;
 }
 .btn-white {
@@ -111,7 +117,7 @@ body {
 }
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
   /* box-shadow : x-axise upslon blur color*/
 }
 /* active state means when u click that button */
@@ -123,12 +129,13 @@ body {
   display: inline-block;
   height: 100%;
   width: 100%;
-  border-radius: 100px;
+  border-radius: 10rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
   transition: all 0.3s;
+  font-size: 1.6rem;
 }
 .btn-white::after {
   background-color: #fff;
@@ -156,12 +163,12 @@ body {
   /* intial state for the animation */
   0% {
     opacity: 0;
-    transform: translateX(-100px);
+    transform: translateX(-10rem);
     /* Changing the X axise for a bit */
   }
   /* middle state for the animation */
   80% {
-    transform: translateX(10px);
+    transform: translateX(1rem);
   }
   /* Final State for the animation */
   100% {
@@ -174,12 +181,12 @@ body {
   /* intial state for the animation */
   0% {
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(10rem);
     /* Changing the X axise for a bit */
   }
   /* middle state for the animation */
   80% {
-    transform: translateX(-10px);
+    transform: translateX(-1rem);
   }
   /* Final State for the animation */
   100% {
