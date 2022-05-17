@@ -47,16 +47,16 @@ body {
   /* We need to show that position relative because we use position property in logo box , logo box is the child class of header part so*/
 }
 
-.logo-box {
+.header_part__logo-box {
   position: absolute;
   top: 4rem;
   left: 4rem;
 }
-.logo {
+.header_part__logo {
   height: 3.5rem;
 }
 
-.Text-box-main {
+.header_part__Text-box-main {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -110,7 +110,7 @@ body {
   border-radius: 2rem;
   transition: all 0.2s;
 }
-.btn-white {
+.btn--white {
   background-color: #fff;
   color: #777;
   animation: button-main 0.5s ease-in;
